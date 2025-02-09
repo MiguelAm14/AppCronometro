@@ -52,12 +52,16 @@ namespace AppCronometro
             play = true;
             btnAccionar.BackColor = Color.Red;
             btnAccionar.Text = "Parar";
+            
         }
 
         private void btnReiniciar_Click(object sender, EventArgs e)
         {
             // Se detiene el timer y se reinician las horas, minutos y segundos.
             timer1.Stop();
+            play = false;
+            btnAccionar.BackColor = Color.Green;
+            btnAccionar.Text = "Iniciar";
             horas = minutos = segundos = 0;
             lblContador.Text = "00:00:00";
         }
